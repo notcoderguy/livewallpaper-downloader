@@ -1,74 +1,89 @@
-# LiveWallpaper Downloader
+# 🎥 LiveWallpaper Downloader 🚀
 
-## Description
+## 📜 Description
 
-This project consists of two Python scripts, `links.py` and `downloads.py`, which work together to scrape video links from a website and download the corresponding videos using the Aria2c download manager.
+Dive into a world where your favorite live wallpapers come to life right on your desktop! This project, featuring Python script 🐍 - `main.py`, empowers you to scrape video links 🌐 from a website and download those mesmerizing videos using the swift Aria2c download manager.
 
-## Prerequisites
+## ✅ Prerequisites
 
-- Python 3.x
-- Aria2c (for downloading videos)
+Before we get started, make sure you have:
 
-## Installation
+- Python 3.x 🐍 installed on your machine.
+- Aria2c 📥 for the smooth downloading of videos.
 
-1. Clone this repository:
+## 🛠 Installation
 
-```bash
-git clone https://github.com/yourusername/your-project.git
-cd your-project
-```
+Follow these steps to set up the LiveWallpaper Downloader:
 
-2. Install the required Python packages:
+1. **Clone the repository:**
 
 ```bash
-pip install cloudscraper beautifulsoup4
+git clone https://github.com/notcoderguy/livewallpaper-downloader.git
+cd livewallpaper-downloader
 ```
 
-3. Install Aria2c (if not already installed):
+2. **Install the required Python packages:**
 
-   - For Linux (Ubuntu/Debian):
+```bash
+pip install -r requirements.txt
+```
+
+3. **Aria2c Installation:**
+
+   - For Linux (Ubuntu/Debian) users:
 
         ```bash
         sudo apt-get install aria2
         ```
 
-   - For macOS (using Homebrew):
+   - For macOS users (via Homebrew):
 
         ```bash
         brew install aria2
         ```
 
-## Usage
+   - For windows users (via Scoop):
+
+        ```bash
+        scoop install aria2
+        ```
+
+
+## 🚀 Usage
 
 ### Step 1: Scraping Video Links
 
-Run the `links.py` script to scrape video links from a specific website. You can customize the website URL and the number of pages to scrape within the script.
+Execute the `main.py` script to start scraping video links from your chosen website. Customize the BASE_URL and MAX_PAGE within the script for a personalized scrape.
 
 ```bash
-python links.py
+python main.py update
 ```
 
-The script will create a `links.txt` file containing the scraped video links.
+This generates a `links.txt` file teeming with the scraped video links.
 
 ### Step 2: Downloading Videos
 
-Run the `downloads.py` script to download videos from the links saved in the `links.txt` file. Provide the path to the `links.txt` file and the download directory as command-line arguments.
+With the `links.txt` filled with video URLs, trigger the `main.py` script to commence the download. Simply specify your desired download directory.
 
 ```bash
-python downloads.py links.txt /path/to/download/directory
+python main.py download <your_download_directory>
 ```
 
-The script will download the videos concurrently using Aria2c with multithreading.
+Leverage the power of Aria2c and multithreading to download the videos concurrently, bringing efficiency to your command.
 
-## Configuration
+## ⚙️ Configuration
 
-You can adjust the number of download threads in the `downloads.py` script by modifying the `download_threads` variable.
+Tailor the download experience by adjusting the `download_threads` variable within the `main.py` script, ensuring the download process aligns with your system's capabilities.
 
-## License
+## 📜 License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Unleash the potential of LiveWallpaper Downloader, which stands proudly under the MIT License. Dive into the [LICENSE](LICENSE) file for all the legal details.
 
-## Acknowledgments
+## 🙌 Acknowledgments
 
-- [cloudscraper](https://github.com/codemanki/cloudscraper) for bypassing anti-bot protection on websites.
-- [Aria2](https://aria2.github.io/) for efficient downloading of files.
+A huge shoutout to:
+
+- [cloudscraper](https://github.com/codemanki/cloudscraper) for skillfully bypassing anti-bot protections.
+- [Aria2](https://aria2.github.io/) for its unmatched efficiency in downloading files.
+
+Embark on a journey with LiveWallpaper Downloader and transform your desktop into a dynamic canvas of your favorite visuals! 🌌✨
